@@ -31,9 +31,10 @@ Always use `pnpm` (pinned to `pnpm@10.33.0`). Never use `npm` or `yarn`.
 
 ## Git Workflow
 
-- `main` is the protected production branch (auto-deploys to live Cloudflare Workers).
-- `develop` is the staging branch (auto-deploys to Cloudflare Workers preview URLs).
-- Always create short-lived branches off `develop` (`feat/...`, `fix/...`, `post/...`, `chore/...`) and open Pull Requests into `develop`, then promote `develop` into `main`.
+- `main` is the only permanent branch and represents production (auto-deploys to live Cloudflare Workers).
+- Always create short-lived branches off `main` (`feat/...`, `fix/...`, `post/...`, `chore/...`) and open Pull Requests into `main`.
+- Never recreate or target `develop`; it has been permanently removed.
+- Test changes through the PR preview deployment or a local build before merging.
 
 ## Code & UI Standards
 

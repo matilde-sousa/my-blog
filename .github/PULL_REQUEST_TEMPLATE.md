@@ -4,7 +4,7 @@
 
 Closes #<!-- issue number --> · [Report a bug](https://github.com/matilde-sousa/my-blog/issues/new?template=bug_report.yml) / [Feature or post idea](https://github.com/matilde-sousa/my-blog/issues/new?template=feature_idea.yml)
 
-> Target: `develop` for features, chores, and posts. `main` is for production promotion only.
+> Target: `main`. Create a short-lived branch off `main` (`feat/...`, `fix/...`, `post/...`, `chore/...`) and open this PR into `main`.
 
 ## Change Type
 
@@ -30,7 +30,7 @@ Closes #<!-- issue number --> · [Report a bug](https://github.com/matilde-sousa
 - [ ] `pnpm run lint` passes (Prettier + ESLint)
 - [ ] `pnpm test` passes (Vitest unit + Playwright browser)
 - [ ] `pnpm run build` produces the Cloudflare Worker bundle
-- [ ] Cloudflare Workers preview verified on this branch
+- [ ] Cloudflare Workers preview verified for this PR
 - [ ] CI is green (check, lint, test, build)
 - [ ] No secrets, `.dev.vars`, or local build output committed
 

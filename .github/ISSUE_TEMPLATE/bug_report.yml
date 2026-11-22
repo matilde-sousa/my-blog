@@ -23,5 +23,5 @@ body:
       label: Environment
       options:
         - Local dev (Fedora)
-        - Cloudflare Preview (develop)
+        - Cloudflare Preview (PR)
         - Production (main)

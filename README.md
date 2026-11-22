@@ -76,9 +76,11 @@ Posts will be written in Markdown or MDX and processed by `mdsvex` with plugins 
 
 ## Deployment
 
-- `develop` deploys to Cloudflare Workers preview URLs.
-- `main` is the protected production branch and deploys to the live Worker.
-- Work happens on short-lived branches off `develop` (`feat/…`, `fix/…`, `post/…`, `chore/…`), merged into `develop` via PR and promoted to `main` via a separate PR.
-- GitHub Actions runs type checks, linting, unit/browser tests, and the production build on pushes and PRs to both branches.
+This repository uses GitHub Flow: `main` is the only permanent branch and represents production.
+
+- Create short-lived branches off `main` (`feat/…`, `fix/…`, `post/…`, `chore/…`) and open a PR into `main`.
+- Test changes through the PR preview deployment or a local build before merging.
+- Merging to `main` deploys the live Cloudflare Worker.
+- GitHub Actions runs type checks, linting, unit/browser tests, and the production build on pushes and PRs targeting `main`.
 
 If bindings in `wrangler.jsonc` change, run `pnpm run gen` and commit the updated `worker-configuration.d.ts`.
