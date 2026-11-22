@@ -1,7 +1,7 @@
 name: Feature or Post Idea
 description: Plan a new blog feature, UI component, or build-in-public post
-title: "[Idea]: "
-labels: ["enhancement"]
+title: '[Idea]: '
+labels: ['enhancement']
 body:
   - type: textarea
     id: goal
