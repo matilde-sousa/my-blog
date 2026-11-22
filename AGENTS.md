@@ -12,7 +12,7 @@ Always use `pnpm` (pinned to `pnpm@10.33.0`). Never use `npm` or `yarn`.
 - `pnpm run check` — Run `wrangler types --check`, `svelte-kit sync`, and `svelte-check`
 - `pnpm run lint` — Run Prettier check and ESLint
 - `pnpm run format` — Auto-format all files with Prettier
-- `pnpm run test:unit -- --run` — Run Vitest + Playwright browser unit tests
+- `pnpm run test:unit --run` — Run Vitest + Playwright browser unit tests once
 - `pnpm run build` — Verify Wrangler types and build production bundle
 
 ## Architecture & Deployment

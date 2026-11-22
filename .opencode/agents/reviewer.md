@@ -2,10 +2,19 @@
 description: Reviews uncommitted git diffs and staged changes for Svelte 5 best practices, TypeScript safety, accessibility, Tailwind v4 styling, and Cloudflare Workers compatibility.
 mode: subagent
 temperature: 0.1
-tools:
-  write: false
-  edit: false
-  bash: true
+permissions:
+  - action: edit
+    resource: '*'
+    effect: deny
+  - action: shell
+    resource: '*'
+    effect: deny
+  - action: shell
+    resource: 'git status *'
+    effect: allow
+  - action: shell
+    resource: 'git diff *'
+    effect: allow
 ---
 
 You are a senior frontend and edge-infrastructure code reviewer for this SvelteKit + Cloudflare Workers blog.
