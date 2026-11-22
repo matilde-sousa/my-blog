@@ -1,0 +1,20 @@
+name: Feature or Post Idea
+description: Plan a new blog feature, UI component, or build-in-public post
+title: "[Idea]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal & Motivation
+      description: What are we building or writing about?
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Acceptance Criteria / Tasks
+      placeholder: |
+        - [ ] Draft Figma wireframe
+        - [ ] Build Svelte component
+        - [ ] Write unit test
