@@ -28,6 +28,7 @@ Always use `pnpm` (pinned to `pnpm@10.33.0`). Never use `npm` or `yarn`.
 - **Configuration:** SvelteKit, mdsvex, Tailwind, and Vitest are configured together in `vite.config.ts`; there is no separate `svelte.config.js`.
 - **Types:** `worker-configuration.d.ts` is generated via `pnpm run gen` (`wrangler types`) and ignored by ESLint. Re-run `pnpm run gen` if bindings in `wrangler.jsonc` change.
 - **Content:** Markdown and MDX use `mdsvex` with plugins for code blocks, callouts, anchors, TOC, and Mermaid diagrams. Photo logs and embedded browser games are first-class content goals.
+- **Motion:** Lenis and GSAP `ScrollTrigger` initialize once in `src/routes/+layout.svelte` inside `onMount`; users who prefer reduced motion skip Lenis. Child components should use `getLenis`, `stopScroll`, `startScroll`, or `scrollTo` from `src/lib/lenis.ts` instead of creating another instance, and add `data-lenis-prevent` to nested scroll areas such as modals and games.
 
 ## Git Workflow
 
